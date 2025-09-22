@@ -14,6 +14,22 @@
         <title>Tech Talent Application</title>
         <!-- Title of the Page (Tab Bar) -->
     </head>
+    <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f9f9f9;
+                margin: 20px;
+            }
+            label {
+                font-weight: bold;
+                color: #333;
+            }
+            fieldset {
+                border: 2px solid #0077cc;
+                padding: 10px;
+                background-color: #eef6ff;
+            }
+        </style>
     <body>
         <main>
             <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
@@ -89,7 +105,7 @@
                 title="8-12 Digit Phone Number">
                 <br>
                 <br>
-                <p style="display: inline;">Skills:</p>
+                <p style="display: inline; font-weight: bold;">Skills:</p>
                 <input type="checkbox" id="Skill1" name="Skills[]" value="Programming" required
                 title="Select at least one skill">
                 <label for="Skill1">Programming</label>
@@ -114,10 +130,10 @@
                 <textarea id="Other_Skills" name="Other_Skills" rows="5" cols="50"></textarea>
                 <br>
                 <br>
-            <input type="submit" value="Submit Application">
-            <!-- Submit button to send the form data -->
-            <input type="reset" value="Reset Application Form">
-            <!-- Reset button to clear the form fields -->
+                <input type="submit" value="Submit Application">
+                <!-- Submit button to send the form data -->
+                <input type="reset" value="Reset Application Form">
+                <!-- Reset button to clear the form fields -->
             </form>
         </main>
     </body>
