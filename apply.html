@@ -78,4 +78,47 @@
                 <input type="text" id="Postcode" name="Postcode" required pattern="\d{4}" maxlength="4" 
                 title="4 Digit Postcode">
                 <br>
-                <br>    
+                <br>
+                <label for="Email">Email:</label>
+                <input type="email" id="Email" name="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                title="Enter a valid email address">
+                <br>
+                <br>
+                <label for="Phone">Phone Number:</label>
+                <input type="tel" id="Phone" name="Phone" required pattern="\d{8,12}" maxlength="12"
+                title="8-12 Digit Phone Number">
+                <br>
+                <br>
+                <p style="display: inline;">Skills:</p>
+                <input type="checkbox" id="Skill1" name="Skills[]" value="Programming" required
+                title="Select at least one skill">
+                <label for="Skill1">Programming</label>
+                <input type="checkbox" id="Skill2" name="Skills[]" value="Web Development">
+                <label for="Skill2">Web Development</label>
+                <input type="checkbox" id="Skill3" name="Skills[]" value="Data Analysis">
+                <label for="Skill3">Data Analysis</label>
+                <input type="checkbox" id="Skill4" name="Skills[]" value="Project Management">
+                <label for="Skill4">Project Management</label>
+                <input type="checkbox" id="Skill5" name="Skills[]" value="Cybersecurity">
+                <label for="Skill5">Cybersecurity</label>
+                <input type="checkbox" id="Skill6" name="Skills[]" value="Cloud Computing">
+                <label for="Skill6">Cloud Computing</label>
+                <input type="checkbox" id="Skill7" name="Skills[]" value="AI and Machine Learning">
+                <label for="Skill7">AI and Machine Learning</label>
+                <input type="checkbox" id="Skill8" name="Skills[]" value="Other">
+                <label for="Skill8">Other</label>
+                <br>
+                <br>
+                <label for="Other_Skills">If Other, please specify:</label>
+                <br>
+                <textarea id="Other_Skills" name="Other_Skills" rows="5" cols="50"></textarea>
+                <br>
+                <br>
+            <input type="submit" value="Submit Application">
+            <!-- Submit button to send the form data -->
+            <input type="reset" value="Reset Application Form">
+            <!-- Reset button to clear the form fields -->
+            </form>
+        </main>
+    </body>
+</html>    
