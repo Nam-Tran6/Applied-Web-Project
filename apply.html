@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Charset Declaration -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Viewport Settings for Responsive Design-->
+        <meta name="author" content="Sokna David Heang">
+        <!-- Author Information -->
+        <meta name="description" content="page for applying for Tech Talent">
+        <!-- Description of the Page -->
+        <meta name="keywords" content="Tech Talent, Application">
+        <!-- Keywords for Search Engines -->
+        <title>Tech Talent Application</title>
+        <!-- Title of the Page (Tab Bar) -->
+    </head>
+    <style>
+     /* General page styles */
+            body {
+                font-family: Arial, sans-serif;  /* Sets font style */
+                background-color: #f9f9f9;  /* Light gray background */
+                margin: 20px;  /* Adds margin/spacing around the body */
+            }
+            label {
+                font-weight: bold;  /* Makes labels bold */
+                color: #333;  /* Dark gray text */
+            }
+            fieldset {
+                border: 2px solid #0077cc;  /* Blue border around gender group */
+                padding: 10px;  /* Space inside the box */
+                background-color: #eef6ff;  /* Light blue background */
+            }
+            h1 {
+                border-bottom: 2px solid darkblue /* Blue underline for the title */
+            }
+    </style>
+    <body>
+        <main>
+            <!-- APPLICATION FORM START -->
+            <h1 style="text-align:center; color:black;">Tech Talent Application Form</h1>
+            <!-- heading for the application form -->
+            <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+                <!-- action: URL where form data will be submitted -->
+                <!-- method="post": sends data securely in the request body -->
+                <!-- SECTION 1: JOB DETAILS -->
+                <label for="Job_Reference_Number">Job Reference Number:</label>
+                <!-- 'for' connects label to the input with same id -->
+                <input type="text" id="Job_Reference_Number" name="Job_Reference_Number" maxlength="5" required pattern="[A-Za-z0-9]{5}" 
+                title="5 Alphanumeric Characters">
+                 <!-- Text field:
+                 - maxlength="5" restricts input to 5 characters
+                 - required: must be filled before submission
+                 - pattern: must be exactly 5 letters/numbers
+                 - title: shown as tooltip if invalid -->
+                <br>
+                <br>
+                <!-- SECTION 2: PERSONAL DETAILS -->
+                <label for="First_Name">First Name:</label>
+                <input type="text" id="First_Name" name="First_Name" required maxlength="20" pattern="[A-Za-z]{1,20}" 
+                title="20 Alphabetic Characters Max">
+                <!-- Only allows letters (no numbers or special characters) -->
+                <br>
+                <br>
+                <label for="Last_Name">Last Name:</label>
+                <input type="text" id="Last_Name" name="Last_Name" required pattern="[A-Za-z]{1,20}" maxlength="20"
+                title="20 Alphabetic Characters Max">
+                <br>
+                <br>
+                <label for="DOB">Date of Birth:</label>
+                <input type="text" id="DOB" name="DOB" placeholder="dd/mm/yyyy" 
+                pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/\d{4}" 
+                title="Enter date in dd/mm/yyyy format" required>
+                <!-- Pattern ensures valid date format like 25/12/2000 -->
+                <br>
+                <br>
+            <fieldset>
+                <!-- GENDER SECTION -->
+                <legend>Gender</legend>
+                <!-- Fieldset groups related inputs with a border and legend title -->
+                <input type="radio" id="Male" name="Gender" value="Male" required>
+                <label for="Male">Male</label>
+                <br>
+                <input type="radio" id="Female" name="Gender" value="Female" required>
+                <label for="Female">Female</label>
+                <br>
+                <input type="radio" id="Other" name="Gender" value="Other" required>
+                <label for="Other">Other</label>
+                <!-- All radio inputs share the same name (Gender) so only one can be selected -->
+            </fieldset>
+                <br>
+                <!-- SECTION 3: ADDRESS DETAILS -->
+                <label for="Street_Address">Street Address:</label>
+                <input type="text" id="Street_Address" name="Street_Address" required maxlength="40" 
+                title="40 Characters Max">
+                <br>
+                <br>
+                <label for="Suburb/Town">Suburb:</label>
+                <input type="text" id="Suburb/Town" name="Suburb/Town" required maxlength="40" 
+                title="40 Characters Max">
+                <br>
+                <br>
+                <label for="State">State:</label>
+                <select id="State" name="State" required>
+                <!-- Dropdown for state selection -->
+                    <option value="" disabled selected>Select your state</option>
+                    <!-- Disabled placeholder option -->
+                    <option value="VIC">VIC</option>
+                    <option value="NSW">NSW</option>
+                    <option value="QLD">QLD</option>
+                    <option value="NT">NT</option>
+                    <option value="WA">WA</option>
+                    <option value="SA">SA</option>
+                    <option value="TAS">TAS</option>
+                    <option value="ACT">ACT</option>
+                </select>
+                <br>
+                <br>
+                <label for="Postcode">Postcode:</label>
+                <input type="text" id="Postcode" name="Postcode" required pattern="\d{4}" maxlength="4" 
+                title="4 Digit Postcode">
+                <!-- Ensures postcode is exactly 4 numbers -->
+                <br>
+                <br>
+                <!-- SECTION 4: CONTACT DETAILS -->
+                <label for="Email">Email:</label>
+                <input type="email" id="Email" name="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                title="Enter a valid email address">
+                <!-- Input type=email already validates, pattern makes it stricter -->
+                <br>
+                <br>
+                <label for="Phone">Phone Number:</label>
+                <input type="tel" id="Phone" name="Phone" required pattern="\d{8,12}" maxlength="12"
+                title="8-12 Digit Phone Number">
+                <!-- Only digits allowed, between 8 and 12 numbers -->
+                <br>
+                <br>
+                <!-- SECTION 5: SKILLS AND EXPERIENCE -->
+                <p style="display: inline; font-weight: bold;">Skills:</p>
+                <!-- Checkboxes allow multiple skills to be chosen -->
+                <input type="checkbox" id="Skill1" name="Skills[]" value="Programming" required
+                title="Select at least one skill">
+                <label for="Skill1">Programming</label>
+                <input type="checkbox" id="Skill2" name="Skills[]" value="Web Development">
+                <label for="Skill2">Web Development</label>
+                <input type="checkbox" id="Skill3" name="Skills[]" value="Data Analysis">
+                <label for="Skill3">Data Analysis</label>
+                <input type="checkbox" id="Skill4" name="Skills[]" value="Project Management">
+                <label for="Skill4">Project Management</label>
+                <input type="checkbox" id="Skill5" name="Skills[]" value="Cybersecurity">
+                <label for="Skill5">Cybersecurity</label>
+                <input type="checkbox" id="Skill6" name="Skills[]" value="Cloud Computing">
+                <label for="Skill6">Cloud Computing</label>
+                <input type="checkbox" id="Skill7" name="Skills[]" value="AI and Machine Learning">
+                <label for="Skill7">AI and Machine Learning</label>
+                <input type="checkbox" id="Skill8" name="Skills[]" value="Other">
+                <label for="Skill8">Other</label>
+                <br>
+                <br>
+                <label for="Other_Skills">If Other, please specify:</label>
+                <!-- If "Other" is selected, applicant can specify extra skills -->
+                <br>
+                <textarea id="Other_Skills" name="Other_Skills" rows="5" cols="50"></textarea>
+                <!-- Multiline text input area -->
+                <br>
+                <br>
+                <!-- SECTION 6: FORM CONTROL -->
+                <input type="submit" value="Submit Application">
+                <!-- Submit button to send the form data -->
+                <input type="reset" value="Reset Application Form">
+                <!-- Reset button to clear the form fields -->
+            </form>
+            <!-- APPLICATION FORM END -->
+        </main>
+    </body>
+</html>    

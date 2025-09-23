@@ -1,0 +1,26 @@
+/* add comments later Nam */
+
+@font-face {
+    /* Inports custom fonts*/
+    font-family: OCR-A-Extended;
+    src: url(fonts/ocr-a-extended.ttf);
+}
+
+* {
+    /* Applies font to all elements*/
+    font-family: OCR-A-Extended;
+    /* Add backup later - Nam*/
+}
+
+h1 {
+    font-size: 80px;
+    color: white;
+}
+
+header {
+    background-color: #1a1a1a
+}
+
+body {
+    background: url(images/background.png) repeat fixed;
+}
