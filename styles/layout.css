@@ -1,0 +1,65 @@
+/* add comments later Nam */
+
+@font-face {
+    /* Inports custom fonts*/
+    font-family: OCR-A-Extended;
+    src: url(fonts/ocr-a-extended.ttf);
+}
+
+* {
+    /* Applies font to all elements*/
+    font-family: ORC-A-Extendend;
+    /* Add backup later - Nam*/
+    
+}
+
+h1 {
+    font-size: 80px;
+    color: white;
+}
+
+header {
+    background-color: #1a1a1a;
+}
+
+body {
+    background: url(images/backgroud.png) repeat fixed;
+}
+
+
+/*style for job.html*/
+header,footer{
+    max-width:100%;margin:0 auto
+
+}
+main{
+    max-width:100%;
+    margin:16px auto;
+    
+}
+
+
+article{
+    border:1px solid #e6e6e6;
+    padding:18px;
+    border-radius:8px;
+    margin-bottom:18px;
+    background: transparent;
+}
+h1,h2{
+    margin:0 0 8px
+}
+
+
+p, li, h3, h4, dt, dd{
+    color: white;
+}
+.salary{
+    font-weight:600
+}
+
+dl{
+    display:grid;
+    grid-template-columns:140px 1fr;
+    gap:6px 18px;
+}
