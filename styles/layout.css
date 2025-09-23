@@ -2,13 +2,13 @@
 
 @font-face {
     /* Inports custom fonts*/
-    font-family: OCR-A-Extended;
-    src: url(fonts/ocr-a-extended.ttf);
+    font-family: 'OCR-A-Extended';
+    src: url(fonts/ocr-a-extended.ttf) format('truetype');
 }
 
 * {
     /* Applies font to all elements*/
-    font-family: ORC-A-Extendend;
+    font-family: 'OCR-A-Extended';
     /* Add backup later - Nam*/
     
 }
